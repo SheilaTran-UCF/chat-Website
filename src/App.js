@@ -1,12 +1,7 @@
-import styled from "styled-components";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+import Login from "./feature/login";
 
 function App() {
-  return <Container>Code hear</Container>;
+  return <Login />;
 }
 
 export default App;
