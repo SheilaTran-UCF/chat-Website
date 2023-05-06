@@ -1,5 +1,9 @@
 function Header() {
-  return <div>Header</div>;
+	return (
+		<header className='header'>
+			<h1>Vhalo</h1>
+		</header>
+	);
 }
 
 export default Header;

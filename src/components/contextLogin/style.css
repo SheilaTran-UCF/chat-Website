@@ -1,0 +1,57 @@
+.auth-form-container, .login-form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+   
+   
+    }
+    
+    @media screen and (min-width: 600px) {
+        /* .auth-form-container{
+       
+            padding: 5rcm;
+           border: 1px solid white;
+           border-radius: 10px;
+           margin: 0.5rcm; */
+
+           .body{
+    background-color: rgb(227, 218, 204);
+    width: 30%;
+   }
+        }
+    
+   
+  /* .login-form{
+      
+
+  } */
+    label{
+     
+      text-align: left;
+      padding: 0.25rcm 0;
+      margin-bottom: 10px;
+    
+      /* text-align: center; */
+      /* margin-bottom: 0.5px; */
+      /* color: white; */
+    }
+    input{
+     
+      margin: 10px;
+      padding: 1rcm;
+      margin-bottom: 20px;
+     
+    } 
+    button{
+      border: none;
+      background-color: red;
+      padding: 10px;
+      border-radius:0.5px;
+      cursor: pointer;
+      color: green;
+      align-self: center;
+      /* width: 100px; */
+      
+      
+    }
+   

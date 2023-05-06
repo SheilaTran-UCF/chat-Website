@@ -1,5 +1,11 @@
+import './style.css';
+
 function Footer() {
-  return <div>Footer</div>;
+	return (
+		<footer className='footer'>
+			<p>Vhalo</p>
+		</footer>
+	);
 }
 
 export default Footer;
