@@ -53,6 +53,7 @@ const H2 = styled.h2`
 function ContextRegister() {
 	const [email, setEmail] = useState('');
 	const [pass, setPass] = useState('');
+	const [confirm, setConfirm] = useState('');
 
 	const handleSubmit = item => {
 		item.preventDefault();
@@ -81,8 +82,8 @@ function ContextRegister() {
 					></Input>
 					<Label> Confirm Password</Label>
 					<Input
-						value={pass}
-						onChange={a => setPass(a.target.value)}
+						value={confirm}
+						onChange={a => setConfirm(a.target.value)}
 						placeholder='confirm password'
 					></Input>
 					<Button type='submit'>Sign Up</Button>
