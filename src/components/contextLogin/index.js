@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -28,18 +28,22 @@ const Button = styled.button`
 	cursor: pointer;
 	color: green;
 	align-self: center;
+	border-radius: 5px;
+	margin-bottom: 10px;
 `;
 
 const Label = styled.label`
 	text-align: left;
 	padding: 0.25rcm 0;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 10px;
 `;
 
 const Input = styled.input`
 	margin: 10px;
 	padding: 1rcm;
 	margin-bottom: 20px;
+	border-radius: 5px;
 `;
 
 const H2 = styled.h2`
@@ -49,6 +53,10 @@ const H2 = styled.h2`
 function ContentLogin() {
 	const [email, setEmail] = useState('');
 	const [pass, setPass] = useState('');
+
+	const navigate = useNavigate(true);
+	const handleClick = () => navigate('register');
+	const userPage = () => navigate('user_');
 
 	const handleSubmit = item => {
 		item.preventDefault();
@@ -75,8 +83,13 @@ function ContentLogin() {
 						onChange={a => setPass(a.target.value)}
 						placeholder='enter password'
 					></Input>
-					<Button type='submit' className='btn btn-primary'>
+					<Button type='submit' onClick={userPage}>
 						Login
+					</Button>
+					<br></br>
+					<Label> Don't have an account yet?</Label>
+					<Button type='button' onClick={handleClick}>
+						Please Register
 					</Button>
 				</Body>
 			</LoginForm>
